@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-export BENCH_SIZE="$((1024 * 1024 * 1024))"
+# 8 GiB
+export BENCH_SIZE="$((8 * 1024 * 1024 * 1024))"
 
 echo "BENCH SOCKET:"
 python bench_socket.py | pv --stop-at-size --size=${BENCH_SIZE} > /dev/null
