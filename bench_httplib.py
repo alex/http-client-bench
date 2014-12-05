@@ -14,7 +14,7 @@ def main():
 
     conn = HTTPConnection('localhost', 8080)
     conn.request('GET', '/')
-    r = conn.getresponse()
+    r = conn.getresponse(buffering=True)
 
     while True:
         sys.stdout.write(r.read(CHUNK_SIZE))
