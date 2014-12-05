@@ -3,6 +3,8 @@
 # 8 GiB
 export BENCH_SIZE="$((8 * 1024 * 1024 * 1024))"
 
+python --version
+go version
 echo "BENCH SOCKET:"
 python bench_socket.py | pv --stop-at-size --size=${BENCH_SIZE} > /dev/null
 echo "BENCH HTTPLIB:"
