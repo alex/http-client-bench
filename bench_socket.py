@@ -1,3 +1,4 @@
+import signal
 import socket
 import sys
 
@@ -5,6 +6,8 @@ import sys
 CHUNK_SIZE = 16384
 
 def main():
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("localhost", 8080))
     s.sendall(b"GET / HTTP/1.1\r\n\r\n")
