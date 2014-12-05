@@ -5,10 +5,6 @@ To start the server::
 
     $ go run server.go
 
-And in a second shell (run each until the data stabilizes)::
+And in a second shell::
 
-    $ python bench_socket.py | pv > /dev/null
-    $ python bench_requests.py | pv > /dev/null
-    $ python bench_urllib3.py | pv > /dev/null
-    $ python bench_httplib.py | pv > /dev/null
-    $ go run bench_http.go | pv > /dev/null
+    $ ./run.sh
