@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # 8 GiB
 export BENCH_SIZE="$((8 * 1024 * 1024 * 1024))"
 
